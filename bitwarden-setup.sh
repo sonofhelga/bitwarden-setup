@@ -14,9 +14,7 @@ sudo apt install docker-ce docker-compose
 sudo usermod -aG docker $name
 curl -Lso bitwarden.sh https://go.btwrdn.co/bw-sh && chmod 700 bitwarden.sh
 chmod +x bitwarden.sh 
-sudo apt install certbot python-certbot-apache
 sudo apt install certbot python3-certbot-apache
-certbot --apache -d www.theitadventure.com
 sudo certbot --apache -d www.theitadventure.com
 sudo systemctl disable apache2
 ./bitwarden install
