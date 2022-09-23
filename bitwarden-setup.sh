@@ -32,3 +32,5 @@ echo 'enter to continue.'
 read waiting
 
 sudo ./bitwarden.sh install
+
+sudo ./bitwarden.sh start
