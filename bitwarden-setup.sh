@@ -22,4 +22,13 @@ chmod +x bitwarden.sh
 sudo apt install certbot python3-certbot-apache -y
 sudo certbot --apache -d $website
 sudo systemctl disable apache2
-./bitwarden install
+sudo systemctl stop apache2
+
+clear
+echo 'starting the actual bitwarden install'
+echo 'remember to use website in this form now: website.com'
+echo 'yes we want a lets encrypt ssl cert'
+echo 'enter to continue.'
+read waiting
+
+sudo ./bitwarden.sh install
