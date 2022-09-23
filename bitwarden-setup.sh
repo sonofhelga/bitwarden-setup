@@ -4,7 +4,7 @@ echo "do not run this bad boy as root."
 echo "what is your username?"
 read name
 
-sudo apt udpate -y && sudo apt full-upgrade
+sudo apt update -y && sudo apt full-upgrade -y
 sudo apt install apache2 curl
 sudo apt install apt-transport-https ca-certificates gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
