@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "do not run this bad boy as root."
-echo "what is your username?"
-read name
-
 echo "what is the name of the domain we're installing for?"
 echo "should be in format www.website.com"
 read website
@@ -16,7 +12,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 curl -Lso bitwarden.sh https://go.btwrdn.co/bw-sh && chmod 700 bitwarden.sh
 sudo apt update -y
 sudo apt install docker-ce docker-compose -y
-sudo usermod -aG docker $name
+sudo usermod -aG docker $USER
 curl -Lso bitwarden.sh https://go.btwrdn.co/bw-sh && chmod 700 bitwarden.sh
 chmod +x bitwarden.sh 
 sudo apt install certbot python3-certbot-apache -y
