@@ -16,6 +16,8 @@ sudo usermod -aG docker $USER
 curl -Lso bitwarden.sh https://go.btwrdn.co/bw-sh && chmod 700 bitwarden.sh
 chmod +x bitwarden.sh 
 sudo apt install certbot python3-certbot-apache -y
+sudo ufw allow 80
+sudo ufw allow 443
 sudo certbot --apache -d $website
 sudo systemctl disable apache2
 sudo systemctl stop apache2
